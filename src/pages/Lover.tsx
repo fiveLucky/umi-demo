@@ -2,11 +2,10 @@
  * @Author: xuwenjie
  * @Date: 2023-03-07 09:56:10
  * @LastEditors: xuwenjie
- * @LastEditTime: 2023-03-07 10:00:11
- * @Description:  
- * @FilePath: /my-app/src/pages/Lover.tsx
+ * @LastEditTime: 2023-03-07 21:34:12
+ * @Description:
+ * @FilePath: /umi-demo/src/pages/Lover.tsx
  */
-import { HeartTwoTone, SmileTwoTone } from '@ant-design/icons';
 import { PageContainer } from '@ant-design/pro-components';
 import { useIntl } from '@umijs/max';
 import { Alert, Card, Typography } from 'antd';
@@ -36,17 +35,10 @@ const Lover: React.FC = () => {
             marginBottom: 48,
           }}
         />
-        <Typography.Title level={2} style={{ textAlign: 'center' }}>
-          <SmileTwoTone /> Ant Design Pro <HeartTwoTone twoToneColor="#eb2f96" /> You
-        </Typography.Title>
-      </Card>
-      <Card>
-        
         <Typography.Title level={2} className="lover">
           I love you my baby. You are the best girl in the world.
         </Typography.Title>
       </Card>
-      
     </PageContainer>
   );
 };

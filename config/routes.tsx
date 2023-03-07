@@ -2,9 +2,9 @@
  * @Author: xuwenjie
  * @Date: 2023-03-07 09:19:15
  * @LastEditors: xuwenjie
- * @LastEditTime: 2023-03-07 10:29:04
- * @Description:  
- * @FilePath: /my-app/config/routes.ts
+ * @LastEditTime: 2023-03-07 21:25:15
+ * @Description:
+ * @FilePath: /umi-demo/config/routes.tsx
  */
 /**
  * @name umi 的路由配置
@@ -33,23 +33,25 @@ export const defaultRoutes = [
     ],
   },
   {
-    path: '*',
-    layout: false,
-    component: '@/pages/404',
-  },
-]
-export default [
-  {
     path: '/welcome',
     name: 'welcome',
     icon: 'smile',
     component: '@/pages/Welcome',
   },
   {
+    path: '/',
+    redirect: '/welcome',
+  },
+  {
+    path: '*',
+    layout: false,
+    component: '@/pages/404',
+  },
+  {
     path: '/admin',
     name: 'admin',
     icon: 'crown',
-    access: 'canAdmin',
+    // access: 'canAdmin',
     routes: [
       {
         path: '/admin',
@@ -69,7 +71,10 @@ export default [
     component: '@/pages/TableList',
   },
   {
-    path: '/',
-    redirect: '/welcome',
+    name: '小宝贝',
+    icon: 'table',
+    path: '/dota',
+    access: '/dota',
+    component: '@/pages/Lover',
   },
 ];

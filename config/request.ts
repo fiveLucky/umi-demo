@@ -107,3 +107,7 @@ export const errorConfig: RequestConfig = {
     },
   ],
 };
+
+export default {
+  ...errorConfig,
+};

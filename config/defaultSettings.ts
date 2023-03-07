@@ -1,3 +1,11 @@
+/*
+ * @Author: xuwenjie
+ * @Date: 2023-03-07 09:19:15
+ * @LastEditors: xuwenjie
+ * @LastEditTime: 2023-03-07 19:17:52
+ * @Description:
+ * @FilePath: /umi-demo/config/defaultSettings.ts
+ */
 import { ProLayoutProps } from '@ant-design/pro-components';
 
 /**
@@ -16,7 +24,7 @@ const Settings: ProLayoutProps & {
   fixSiderbar: true,
   colorWeak: false,
   title: 'Ant Design Pro',
-  pwa: true,
+  // pwa: true,
   logo: 'https://gw.alipayobjects.com/zos/rmsportal/KDpgvguMpGfqaHPjicRK.svg',
   iconfontUrl: '',
   token: {

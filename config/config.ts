@@ -28,7 +28,7 @@ export default defineConfig({
    * @description 只支持 path，component，routes，redirect，wrappers，title 的配置
    * @doc https://umijs.org/docs/guides/routes
    */
-  routes: defaultRoutes,
+  routes: [...defaultRoutes],
   /**
    * @name 主题的配置
    * @description 虽然叫主题，但是其实只是 less 的变量设置
@@ -77,7 +77,7 @@ export default defineConfig({
    */
   title: 'Ant Design Pro',
   layout: {
-    locale: true,
+    locale: false,
     ...defaultSettings,
   },
   /**
@@ -151,5 +151,4 @@ export default defineConfig({
     strategy: 'normal',
   },
   requestRecord: {},
-
 });
