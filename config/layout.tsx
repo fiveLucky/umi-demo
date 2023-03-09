@@ -2,7 +2,7 @@
  * @Author: xuwenjie
  * @Date: 2023-03-07 16:03:20
  * @LastEditors: xuwenjie
- * @LastEditTime: 2023-03-07 21:32:04
+ * @LastEditTime: 2023-03-09 09:48:32
  * @Description:
  * @FilePath: /umi-demo/config/layout.tsx
  */
@@ -49,7 +49,7 @@ const layout: RunTimeLayoutConfig = (props) => {
       // 如果没有登录，重定向到 login
       if (!initialState?.currentUser && location.pathname !== loginPath) {
         // 访问任何一个页面，都会走这里，判断登录态
-        // history.push(loginPath);
+        history.push(loginPath);
       }
     },
     layoutBgImgList: [

@@ -1,3 +1,11 @@
+/*
+ * @Author: xuwenjie
+ * @Date: 2023-03-07 21:33:50
+ * @LastEditors: xuwenjie
+ * @LastEditTime: 2023-03-09 09:49:00
+ * @Description:
+ * @FilePath: /umi-demo/src/app.tsx
+ */
 import type { Settings as LayoutSettings } from '@ant-design/pro-components';
 import { history } from '@umijs/max';
 import defaultSettings from '../config/defaultSettings';
@@ -35,7 +43,7 @@ export async function getInitialState(): Promise<{
       return msg.data;
     } catch (error) {
       // 接口返回401，会走这里，跳转到登录页
-      // history.push(loginPath);
+      history.push(loginPath);
     }
     return undefined;
   };
