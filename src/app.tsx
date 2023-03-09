@@ -2,7 +2,7 @@
  * @Author: xuwenjie
  * @Date: 2023-03-07 21:33:50
  * @LastEditors: xuwenjie
- * @LastEditTime: 2023-03-09 09:49:00
+ * @LastEditTime: 2023-03-09 10:24:31
  * @Description:
  * @FilePath: /umi-demo/src/app.tsx
  */
@@ -32,7 +32,7 @@ export async function getInitialState(): Promise<{
   settings?: Partial<LayoutSettings>;
   currentUser?: API.CurrentUser;
   loading?: boolean;
-  authList?: object[] | [];
+  authList: any[] | [];
   fetchUserInfo?: () => Promise<API.CurrentUser | undefined>;
 }> {
   const fetchUserInfo = async () => {
@@ -62,5 +62,6 @@ export async function getInitialState(): Promise<{
   return {
     fetchUserInfo,
     settings: defaultSettings as Partial<LayoutSettings>,
+    authList: [],
   };
 }

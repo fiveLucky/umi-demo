@@ -2,7 +2,7 @@
  * @Author: xuwenjie
  * @Date: 2023-03-07 19:48:35
  * @LastEditors: xuwenjie
- * @LastEditTime: 2023-03-07 21:33:41
+ * @LastEditTime: 2023-03-09 10:27:17
  * @Description:
  * @FilePath: /umi-demo/src/services/global.ts
  */
@@ -16,16 +16,24 @@ export async function fetchAuthList() {
   // });
   return Promise.resolve([
     {
-      path: '/admin',
+      key: '/admin',
       auth: true,
+      type: 'menu',
     },
     {
-      path: '/admin/sub-page',
+      key: '/admin/sub-page',
       auth: false,
+      type: 'menu',
     },
     {
-      path: '/dota',
+      key: '/dota',
       auth: false,
+      type: 'menu',
+    },
+    {
+      key: '/list:create',
+      auth: false,
+      type: 'button',
     },
   ]);
 }

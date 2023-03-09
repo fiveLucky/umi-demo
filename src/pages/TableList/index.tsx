@@ -13,6 +13,7 @@ import {
 import { FormattedMessage, useIntl } from '@umijs/max';
 import { Button, Drawer, Input, message } from 'antd';
 import React, { useRef, useState } from 'react';
+import AuthRender from '@/components/AuthRender';
 import type { FormValueType } from './components/UpdateForm';
 import UpdateForm from './components/UpdateForm';
 
@@ -254,15 +255,17 @@ const TableList: React.FC = () => {
           labelWidth: 120,
         }}
         toolBarRender={() => [
-          <Button
-            type="primary"
-            key="primary"
-            onClick={() => {
-              handleModalOpen(true);
-            }}
-          >
-            <PlusOutlined /> <FormattedMessage id="pages.searchTable.new" defaultMessage="New" />
-          </Button>,
+          <AuthRender key="/list:create" authKey="/list:create">
+            <Button
+              type="primary"
+              key="primary"
+              onClick={() => {
+                handleModalOpen(true);
+              }}
+            >
+              <PlusOutlined /> <FormattedMessage id="pages.searchTable.new" defaultMessage="New" />
+            </Button>
+          </AuthRender>,
         ]}
         request={rule}
         columns={columns}
