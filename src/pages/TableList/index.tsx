@@ -255,6 +255,7 @@ const TableList: React.FC = () => {
           labelWidth: 120,
         }}
         toolBarRender={() => [
+          // key是react要求的key，因为这里是个数组，需要用key
           <AuthRender key="/list:create" authKey="/list:create">
             <Button
               type="primary"
